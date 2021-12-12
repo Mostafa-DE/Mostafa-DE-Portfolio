@@ -9,7 +9,7 @@ interface Props {
 export const HeaderStyled = styled.header<Props>`
   background-color: ${(props) => props.bg};
   position: fixed;
-  padding: 0.4rem 0;
+  padding: 1rem 0;
   z-index: 1;
   width: 100%;
   display: flex;
@@ -57,21 +57,26 @@ export const HeaderStyled = styled.header<Props>`
     width: 100%;
   }
 
-  @media (max-width: 748px) {
-    .containerLink li {
-      margin: 0 0 0 1.5rem;
-      align-items: center;
-    }
+  .menuIcon {
+    color: #fafafa;
+    font-size: 1.8rem ;
+    display: none;
+    margin: 0 ;
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: 748px) {
     .containerLink li {
       display: none;
     }
 
-    & {
-      justify-content: flex-start;
-      margin: 1rem 0 0 1rem;
+    .containerLogo {
+      margin: 0 0 0 -1rem ;
     }
+
+    .menuIcon {
+      display: block;
+      margin: 0 0 0 -1rem ;
+    }
+  }
   }
 `;

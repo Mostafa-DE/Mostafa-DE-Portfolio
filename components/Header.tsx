@@ -1,6 +1,7 @@
 import { HeaderStyled } from "./styles/Header.styled";
 import { Link } from "react-scroll";
 import useScrollNavbar from "../Hooks/useScrollState";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Header(props: any): JSX.Element {
   const [scrollState] = useScrollNavbar();
@@ -39,6 +40,7 @@ export default function Header(props: any): JSX.Element {
           </Link>
         </li>
       </ul>
+      <AiOutlineMenu className="menuIcon" />
     </HeaderStyled>
   );
 }

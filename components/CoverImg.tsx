@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 export default function CoverImage(props: any): JSX.Element {
   return (
-    <CoverImgStyled id="home">
+    <CoverImgStyled data-aos="fade-in" id="home">
       <div className="container">
         <div className="containerWelcomeTxt">
           Hi There, I'm <span className="myName">Mostafa-DE Fayyad</span>

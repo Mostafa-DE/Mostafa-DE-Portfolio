@@ -6,7 +6,7 @@ export default function AboutMe(props: any): JSX.Element {
     <AboutMeStyled id="aboutMe">
       <div className="container">
         <h1 className="title">
-          <BsCodeSlash className="codeIcon" /> About Me{" "}
+          <BsCodeSlash className="codeIcon" /> About Me
           <BsCodeSlash className="codeIcon" />
         </h1>
         <p className="whoIam">__ Who i am__</p>
@@ -17,10 +17,6 @@ export default function AboutMe(props: any): JSX.Element {
             alt="mostafa fayyad"
           />
           <div className="containerTxt">
-            <p>
-              I'm Mostafa-DE Fayyad And I'm <span>Software Engineer</span>
-            </p>
-
             <p className="titleParagraph">PERSONAL STATEMENT</p>
             <p className="txtParagraph">
               Creative things are challenging, and this applies to Software

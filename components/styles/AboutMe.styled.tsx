@@ -41,6 +41,7 @@ export const AboutMeStyled = styled.div`
   .txtParagraph {
     font-size: 1rem;
     color: #333;
+    line-height: 1.4rem;
   }
 
   .titleParagraph {
@@ -61,5 +62,29 @@ export const AboutMeStyled = styled.div`
     background: none;
     color: #ff5757;
     transition: all 0.3s ease-out;
+  }
+
+  @media (max-width: 1188px) {
+    .containerImgAndTxt {
+      flex-direction: column;
+    }
+
+    .containerTxt {
+      width: 60%;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 670px) {
+    .containerTxt {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .personalImg {
+      width: 320px;
+      height: 320px;
+    }
   }
 `;
