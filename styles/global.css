@@ -14,10 +14,10 @@ a {
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  cursor: none !important;
 }
 
 .codeIcon {
-  /* color: rgb(91, 209, 215); */
   color: #ff5757;
   margin: 0 0 -0.5rem 0;
   font-size: 2.5rem;
