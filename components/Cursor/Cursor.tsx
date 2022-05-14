@@ -20,8 +20,8 @@ export default function Header(): JSX.Element {
     return (
         <CursorContainer>
             <svg
-                width={50}
-                height={50}
+                width={35}
+                height={35}
                 viewBox="0 0 50 50"
                 className="svg"
                 style={{
