@@ -2,7 +2,7 @@ import {SkillsContainer} from "./MySkills.styled";
 
 export default function MySkills(): JSX.Element {
     return (
-        <SkillsContainer>
+        <SkillsContainer id="mySkills">
             <div className="container">
                 <div className="skillsDescription">
                     <h3>My skills & experiences.</h3>

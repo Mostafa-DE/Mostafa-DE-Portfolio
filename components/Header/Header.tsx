@@ -3,7 +3,7 @@ import {Link} from "react-scroll";
 import useScrollNavbar from "@/hooks/useScrollState";
 import {AiOutlineMenu} from "react-icons/ai";
 
-export default function Header(props: any): JSX.Element {
+export default function Header(): JSX.Element {
     const [scrollState] = useScrollNavbar();
 
     return (
@@ -15,11 +15,11 @@ export default function Header(props: any): JSX.Element {
                           duration={500}
                           smooth={true}
                     >
-                        Portfo<span className={scrollState === "top" ? "textLogo" : "textLogoScroll"}>lio.</span>
+                        Mostafa-<span className={scrollState === "top" ? "textLogo" : "textLogoScroll"}>DE</span>
                     </Link>
                 </p>
 
-                <ul className={scrollState === "top" ? "containerLink" : "containerLinkScroll"}>
+                <ul className="containerLink">
                     <li>
                         <Link to="aboutMe"
                               duration={1000}
