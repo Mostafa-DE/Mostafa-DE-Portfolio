@@ -20,19 +20,6 @@ export default function MyProjects(): JSX.Element {
                      */}
                     <span style={{color: theme.palette.primary.main}}>Contact me.</span> __
                 </p>
-
-                <div className="containerCards">
-                    <div className="containerCard">
-                        <div className="cardContent">
-                            <p className="shortDescription">
-                                An online store that specializes in selling all local and Turkish products.
-                            </p>
-                            <button className="linkBtn">
-                                Visit Website <AiOutlineArrowDown className="arrowIcon"/>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </MyProjectsContainer>
     );

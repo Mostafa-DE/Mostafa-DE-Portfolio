@@ -6,7 +6,7 @@ import {Link} from "react-scroll";
 export default function CoverImage(): JSX.Element {
     return (
         <CoverImgContainer
-            data-aos="fade-in"
+            // data-aos="fade-in"
             id="home"
         >
             <div className="container">

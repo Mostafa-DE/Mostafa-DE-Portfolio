@@ -4,7 +4,7 @@ import theme from "@/styles/theme"
 export const HeaderContainer = styled("div")({
     ".mainHeader, .mainHeaderScroll": {
         position: "fixed",
-        padding: "1rem 0",
+        padding: "0.5rem 0",
         zIndex: 1,
         width: "100%",
         display: "flex",
