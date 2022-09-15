@@ -1,9 +1,25 @@
-import { FooterContainer } from "./Footer.styled";
+import {FooterContainer} from "./Footer.styled";
+import {BsGithub} from "react-icons/bs"
+import {BsLinkedin} from "react-icons/bs"
+import {BsTwitter} from "react-icons/bs"
+import Box from "@mui/material/Box";
 
 export default function Footer(): JSX.Element {
-  return (
-    <FooterContainer>
-      <h1>Footer will be here...</h1>
-    </FooterContainer>
-  );
+    return (
+        <FooterContainer>
+            <Box>
+                <BsGithub className="contactIcon" />
+                <BsLinkedin className="contactIcon" />
+                <BsTwitter className="contactIcon" />
+            </Box>
+            <Box className="copyRight">
+                <p>
+                    Copyright © All rights reserved & Made By{" "}
+                    <a href="https://www.linkedin.com/in/mostafa-de/" target="_blank">
+                        MOSTAFA FAYYAD
+                    </a>
+                </p>
+            </Box>
+        </FooterContainer>
+    );
 }

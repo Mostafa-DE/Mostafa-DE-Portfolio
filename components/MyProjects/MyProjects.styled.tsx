@@ -3,9 +3,9 @@ import theme from "@/styles/theme"
 
 export const MyProjectsContainer = styled("div")({
     margin: "6rem 0 0 0",
+    padding: "2rem 0",
     backgroundColor: theme.palette.common.white,
     color: theme.palette.common.black,
-    height: "40rem",
 
     ".container": {
         display: "flex",

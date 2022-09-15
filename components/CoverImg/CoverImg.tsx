@@ -11,7 +11,7 @@ export default function CoverImage(): JSX.Element {
         >
             <div className="container">
                 <div>
-                    Hi There 👋, {"I'm"} <span className="myName">Mostafa-de Fayyad</span>
+                    Hi There 👋, {"I'm"} <span className="myName">Mostafa-DE</span>
                 </div>
                 <div className="containerMyCareer">
                     {"I'm"} a <span className="myCareer">Software Engineer</span>
