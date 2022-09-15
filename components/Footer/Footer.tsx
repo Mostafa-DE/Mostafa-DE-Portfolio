@@ -15,7 +15,7 @@ export default function Footer(): JSX.Element {
             <Box className="copyRight">
                 <p>
                     Copyright © All rights reserved & Made By{" "}
-                    <a href="https://www.linkedin.com/in/mostafa-de/" target="_blank">
+                    <a href="https://www.linkedin.com/in/mostafa-de/" rel="noreferrer" target="_blank">
                         MOSTAFA FAYYAD
                     </a>
                 </p>
