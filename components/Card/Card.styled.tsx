@@ -1,7 +1,7 @@
 import {styled} from "@mui/system";
 import theme from "@/styles/theme";
 
-export const CursorContainer = styled("div")({
+export const CardContainer = styled("div")({
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -49,21 +49,5 @@ export const CursorContainer = styled("div")({
     ".description": {
       fontSize: "14px",
     },
-
-    ".btn": {
-        backgroundColor: "transparent",
-        padding: "0.8rem 2rem",
-        marginTop: "2rem",
-        border: `1px solid ${theme.palette.primary.main}`,
-        fontSize: "1rem",
-        color: theme.palette.common.white,
-        borderRadius: "20px",
-        transition: "all 0.3s ease-in",
-    },
-
-    ".btn:hover": {
-        backgroundColor: theme.palette.primary.main,
-        transition: "all 0.3s ease-out",
-    }
 
 })

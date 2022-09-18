@@ -1,10 +1,11 @@
-import {CursorContainer} from "@/components/Card/Card.styled";
+import {CardContainer} from "@/components/Card/Card.styled";
+import DialogProject from "@/components/Dialog";
 
 export default function Card(): JSX.Element {
     const fakeArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     return (
-        <CursorContainer>
+        <CardContainer>
             {fakeArray.map((item, index) => (
                 <div key={index} className="cardBody">
                     <div className="card__overlay">
@@ -14,11 +15,11 @@ export default function Card(): JSX.Element {
                                 Fully-Featured E-Commerce Application, where you can order anything
                                 you want with simple steps.
                             </p>
-                            <button className="btn">Learn More</button>
+                            <DialogProject />
                         </div>
                     </div>
                 </div>
             ))}
-        </CursorContainer>
+        </CardContainer>
     );
 };
