@@ -7,8 +7,8 @@ export default function CarouselProject(): JSX.Element {
     return (
         <Box>
             <Carousel>
-                {items.map((item) => (
-                    <Box>
+                {items.map((item, idx) => (
+                    <Box key={idx}>
                         <img src={item.img} width="100%" height='300' alt='test'/>
                     </Box>
                 ))}
