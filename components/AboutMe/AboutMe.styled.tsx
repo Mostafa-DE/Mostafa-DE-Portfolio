@@ -25,13 +25,13 @@ export const AboutMeContainer = styled("div")({
 
     ".containerImgAndTxt": {
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         alignItems: "center",
     },
 
     ".personalImg": {
-        width: "600px",
-        height: "480px",
+        width: "350px",
+        height: "300px",
         clipPath: "polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%)",
     },
 
@@ -52,6 +52,10 @@ export const AboutMeContainer = styled("div")({
         color: theme.palette.primary.main
     },
 
+    ".container-Btn": {
+        margin: "3rem 0 0 0",
+    },
+
     ".cvBtn": {
         padding: "1rem 2rem",
         cursor: "pointer",
@@ -59,7 +63,7 @@ export const AboutMeContainer = styled("div")({
         color: theme.palette.common.white,
         border: "1px solid #ff5757",
         fontSize: "0.9rem",
-        transition: "all 0.3s ease-in"
+        transition: "all 0.3s ease-in",
     },
 
     ".cvBtn:hover": {
@@ -87,8 +91,7 @@ export const AboutMeContainer = styled("div")({
 
     "@media (max-width: 500px)": {
         ".personalImg": {
-            width: "320px",
-            height: "320px",
+            width: "100%",
         }
     }
 })

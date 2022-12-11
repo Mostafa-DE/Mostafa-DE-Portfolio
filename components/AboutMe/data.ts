@@ -23,3 +23,5 @@ export const data = [
             also like listening to Pop-Rock music while enjoying a novel.`
     }
 ]
+
+export const cvLink = "https://drive.google.com/file/d/1lXcO84sYvtcDIpnjr_yvuxXTomp_0pKY/view?usp=share_link"
