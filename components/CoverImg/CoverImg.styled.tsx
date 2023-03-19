@@ -3,7 +3,7 @@ import theme from "@/styles/theme"
 import {main} from "@popperjs/core";
 
 export const CoverImgContainer = styled("div")({
-    backgroundImage: "url('./cover.jpg')",
+    backgroundImage: "url('./cover-2.jpg')",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
