@@ -14,10 +14,6 @@ export const ContactFormContainer = styled("div")({
         alignItems: "center"
     },
 
-    ".title": {
-        textTransform: "uppercase"
-    },
-
     ".whoIam": {
         color: theme.palette.common.black,
         margin: "0 0 2rem 0"

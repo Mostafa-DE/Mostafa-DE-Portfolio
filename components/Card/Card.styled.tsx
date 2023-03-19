@@ -19,7 +19,7 @@ export const CardContainer = styled("div")({
         margin: "2rem 0 0 0",
     },
 
-    ".card__overlay": {
+    ".cardOverlay": {
         height: "100%",
         width: "100%",
         opacity: 0,
@@ -32,11 +32,11 @@ export const CardContainer = styled("div")({
         backgroundColor: "rgba(51,51,51,0.78)",
     },
 
-    ".cardBody:hover .card__overlay": {
+    ".cardBody:hover .cardOverlay": {
         opacity: 1,
     },
 
-    ".overlay__text": {
+    ".overlayText": {
         color: "white",
         fontSize: "20px",
         position: "relative",
@@ -47,7 +47,7 @@ export const CardContainer = styled("div")({
     },
 
     ".description": {
-      fontSize: "14px",
+        fontSize: "14px",
     },
 
 })

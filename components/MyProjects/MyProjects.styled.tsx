@@ -15,10 +15,6 @@ export const MyProjectsContainer = styled("div")({
         padding: "2rem 0",
     },
 
-    ".title": {
-        textTransform: "uppercase"
-    },
-
     ".bestProjectTxt": {
         margin: "-1rem 0 0 0"
     },

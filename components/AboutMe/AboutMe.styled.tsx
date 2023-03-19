@@ -7,10 +7,6 @@ export const AboutMeContainer = styled("div")({
     alignItems: "center",
     margin: "5rem 0 0 0",
 
-    ".title": {
-        textTransform: "uppercase"
-    },
-
     ".whoIam": {
         color: theme.palette.primary.main,
         margin: "-1rem 0 2rem 0"
@@ -32,7 +28,6 @@ export const AboutMeContainer = styled("div")({
     ".personalImg": {
         width: "350px",
         height: "300px",
-        clipPath: "polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%)",
     },
 
     ".containerTxt": {
@@ -44,12 +39,12 @@ export const AboutMeContainer = styled("div")({
     ".txtParagraph": {
         fontSize: "1rem",
         color: "#333",
-        lineHeight: "1.4rem"
+        lineHeight: "1.4rem",
     },
 
     ".titleParagraph": {
-        margin: "2rem 0 -0.5rem 0",
-        color: theme.palette.primary.main
+        margin: "2rem 0 0 0",
+        color: theme.palette.primary.main,
     },
 
     ".container-Btn": {
@@ -62,14 +57,27 @@ export const AboutMeContainer = styled("div")({
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.common.white,
         border: "1px solid #ff5757",
+        borderRadius: "1.2rem",
         fontSize: "0.9rem",
         transition: "all 0.3s ease-in",
     },
 
     ".cvBtn:hover": {
         background: "none",
+        borderRadius: "0",
         color: theme.palette.primary.main,
         transition: "all 0.3s ease-out"
+    },
+
+    ".descriptionAboutMe": {
+        margin: "0.2rem 0",
+        padding: "0.5rem",
+        borderLeft: "3px solid",
+        borderRight: "3px solid",
+        borderRadius: "0.5rem",
+        paddingLeft: "0.5rem",
+        borderColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.common.white,
     },
 
     "@media (max-width: 1188px)": {

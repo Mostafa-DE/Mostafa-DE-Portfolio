@@ -1,20 +1,34 @@
 import {SkillsContainer} from "./MySkills.styled";
+import Box from "@mui/material/Box";
+import Image from "next/image";
+import {techIcons} from "@/components/MySkills";
+import {Typography} from "@mui/material";
+import {BsCodeSlash} from "react-icons/bs";
 
 export default function MySkills(): JSX.Element {
     return (
         <SkillsContainer id="mySkills">
-            <div className="container">
-                <div className="skillsDescription">
-                    <h3>My skills & experiences.</h3>
-                    <p className="skillsText">
-                        I have a good knowledge of javascript, ReactJs & NextJs while also
-                        having a very good knowledge of CSS and the modern features of it
-                        like Flex. I know CSS Frameworks like bootstrap & MaterializeCSS. I
-                        also have experience in building APIs and dealing with frameworks
-                        like express. I also have good experience working in strapi.
-                    </p>
-                </div>
-            </div>
+            <Box className="container">
+                <h1 className="title">
+                    <BsCodeSlash className="codeIcon"/> My skills & experiences. {" "}
+                    <BsCodeSlash className="codeIcon"/>
+                </h1>
+                <Box className="skillsDescription">
+                    <Typography sx={{textAlign: "center", width: "100%"}}>
+                        __Here are some of the technologies that {"I'm"} comfortable with__
+                    </Typography>
+                </Box>
+                <Box className="containerTechIcons">
+                    {techIcons.map((icon: string, idx: number) => {
+                        return (
+                            <Box key={idx} className="techIcon">
+                                <Image key={idx} src={`/${icon}.png`} alt="skills-img" width={70} height={70}/>
+                            </Box>
+                        );
+                    })
+                    }
+                </Box>
+            </Box>
         </SkillsContainer>
     );
 }
