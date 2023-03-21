@@ -157,3 +157,10 @@ body .dribbble img {
     display: block;
     height: 28px;
 }
+
+@media (max-width: 480px) {
+    .loadingContainer {
+        height: 65vh;
+        zoom: 1.5;
+    }
+}
