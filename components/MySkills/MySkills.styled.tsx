@@ -14,8 +14,8 @@ export const SkillsContainer = styled("div")({
         padding: "1rem 0 6rem 0"
     },
 
-    ".skillsDescription h3": {
-        color: theme.palette.primary.main
+    ".title": {
+        fontSize: "1.9rem",
     },
 
     ".skillsText": {

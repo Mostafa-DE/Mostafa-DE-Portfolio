@@ -2,9 +2,13 @@ import {HeaderContainer} from "./Header.styled";
 import {Link} from "react-scroll";
 import useScrollNavbar from "@/hooks/useScrollState";
 import {AiOutlineMenu} from "react-icons/ai";
+import SideNav from "@/components/SideNav";
+import {useState} from "react";
 
 export default function Header(): JSX.Element {
     const [scrollState] = useScrollNavbar();
+    const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+
 
     return (
         <HeaderContainer>
@@ -25,6 +29,7 @@ export default function Header(): JSX.Element {
                               duration={1000}
                               spy={true}
                               smooth={true}
+                              offset={-70}
                         >
                             About Me
                         </Link>
@@ -34,8 +39,9 @@ export default function Header(): JSX.Element {
                               duration={1000}
                               spy={true}
                               smooth={true}
+                              offset={-70}
                         >
-                            Technologies / Skills
+                            Technologies
                         </Link>
                     </li>
                     <li>
@@ -43,6 +49,7 @@ export default function Header(): JSX.Element {
                               duration={1000}
                               spy={true}
                               smooth={true}
+                              offset={-35}
                         >
                             My Projects
                         </Link>
@@ -52,13 +59,15 @@ export default function Header(): JSX.Element {
                               duration={1500}
                               spy={true}
                               smooth={true}
+                              offset={-35}
                         >
                             Contact Me
                         </Link>
                     </li>
                 </ul>
-                <AiOutlineMenu className="menuIcon"/>
+                <AiOutlineMenu className="menuIcon" onClick={() => setOpenDrawer(true)}/>
             </div>
+            <SideNav open={openDrawer} setOpen={setOpenDrawer}/>
         </HeaderContainer>
     );
 }

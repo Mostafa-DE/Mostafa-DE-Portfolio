@@ -27,3 +27,22 @@ a {
 .title {
     text-transform: uppercase
 }
+
+
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff5757;
+}
+
+.MuiDrawer-paper {
+    background-color: #fafafa;
+    color: #333;
+}

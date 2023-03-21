@@ -17,7 +17,13 @@ export const CoverImgContainer = styled("div")({
 
     ".container": {
         color: theme.palette.common.white,
-        fontSize: "3.5rem"
+    },
+
+    ".hiText": {
+        fontSize: "3.5rem",
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "3rem",
+        },
     },
 
     ".myName:first-of-type": {
@@ -26,13 +32,17 @@ export const CoverImgContainer = styled("div")({
     },
 
     ".containerMyCareer": {
-        margin: "1.5rem 0 0 0"
+        fontSize: "3rem",
+        margin: "1.5rem 0 0 0",
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "2rem",
+        },
     },
 
     ".myCareer": {
         textTransform: "capitalize",
         color: theme.palette.primary.main,
-        animation: " reveal 4s infinite",
+        animation: " reveal 3s infinite",
     },
 
     ".containerBtn": {

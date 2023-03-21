@@ -10,14 +10,12 @@ export default function MySkills(): JSX.Element {
         <SkillsContainer id="mySkills">
             <Box className="container">
                 <h1 className="title">
-                    <BsCodeSlash className="codeIcon"/> My skills & experiences. {" "}
+                    <BsCodeSlash className="codeIcon"/> Technologies {" "}
                     <BsCodeSlash className="codeIcon"/>
                 </h1>
-                <Box className="skillsDescription">
-                    <Typography sx={{textAlign: "center", width: "100%"}}>
-                        __Here are some of the technologies that {"I'm"} comfortable with__
-                    </Typography>
-                </Box>
+                <Typography sx={{textAlign: "center", width: "100%"}}>
+                    __Here are some of the technologies that {"I'm"} comfortable with__
+                </Typography>
                 <Box className="containerTechIcons">
                     {techIcons.map((icon: string, idx: number) => {
                         return (

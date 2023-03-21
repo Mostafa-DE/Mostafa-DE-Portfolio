@@ -4,6 +4,7 @@ import {MyProjectsContainer} from "./MyProjects.styled";
 import {BsCodeSlash} from "react-icons/bs";
 import theme from "@/styles/theme";
 import Card from "@/components/Card";
+import {Typography} from "@mui/material";
 
 
 export default function MyProjects(): JSX.Element {
@@ -15,9 +16,8 @@ export default function MyProjects(): JSX.Element {
                     <BsCodeSlash className="codeIcon"/>
                 </h1>
                 <br/>
-                <p className="bestProjectTxt">
+                <Typography className="bestProjectTxt">
                     __ Here are a few design projects {"I've"} worked on. Want to see more?{" "}
-                    {/* @TODO make (Contact me) text scroll to contact form */}
                     <span style={{color: theme.palette.primary.main}}>
                         <Link to="contact"
                               spy={true}
@@ -27,13 +27,11 @@ export default function MyProjects(): JSX.Element {
                             Contact me
                         </Link>
                     </span> __
-                </p>
+                </Typography>
             </div>
             <div className="containerCards">
                 <Card/>
             </div>
-
-
         </MyProjectsContainer>
     );
 }

@@ -16,7 +16,9 @@ export const MyProjectsContainer = styled("div")({
     },
 
     ".bestProjectTxt": {
-        margin: "-1rem 0 0 0"
+        margin: "-1rem 0 0 0",
+        textAlign: "center",
+        width: "100%",
     },
 
     ".arrowIcon": {
