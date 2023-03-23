@@ -2,9 +2,6 @@ import {styled} from "@mui/system";
 import theme from "@/styles/theme"
 
 export const AboutMeContainer = styled("div")({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     margin: "5rem 0 0 0",
 
     ".whoIam": {
@@ -21,7 +18,7 @@ export const AboutMeContainer = styled("div")({
 
     ".containerImgAndTxt": {
         display: "flex",
-        justifyContent: "space-evenly",
+        justifyContent: "space-between",
         alignItems: "center",
     },
 
@@ -30,25 +27,13 @@ export const AboutMeContainer = styled("div")({
         height: "300px",
     },
 
-    ".containerTxt": {
-        fontSize: "1.2rem",
-        margin: "0 0 0 7rem",
-        width: "35%",
-    },
-
-    ".txtParagraph": {
-        fontSize: "1rem",
-        color: "#333",
-        lineHeight: "1.4rem",
-    },
-
-    ".titleParagraph": {
-        margin: "2rem 0 0 0",
-        color: theme.palette.primary.main,
-    },
-
     ".container-Btn": {
         margin: "3rem 0 0 0",
+        [theme.breakpoints.down("md")]: {
+            display: "flex",
+            justifyContent: "center",
+            margin: "1rem 0 0 0",
+        }
     },
 
     ".cvBtn": {
@@ -70,14 +55,17 @@ export const AboutMeContainer = styled("div")({
     },
 
     ".descriptionAboutMe": {
-        margin: "0.2rem 0",
-        padding: "0.5rem",
+        margin: "1rem 0",
+        padding: "1.5rem 1rem",
         borderLeft: "3px solid",
         borderRight: "3px solid",
         borderRadius: "0.5rem",
         paddingLeft: "0.5rem",
         borderColor: theme.palette.primary.main,
         backgroundColor: theme.palette.common.white,
+        [theme.breakpoints.down("xs")]: {
+            margin: "0.8rem 0.5rem",
+        }
     },
 
     "@media (max-width: 1188px)": {
