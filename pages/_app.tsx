@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "@/styles/global.css";
 import Loading from "@/components/Loading";
+import Head from "next/head";
 
 function MyApp({Component, pageProps}: AppProps) {
     const [loading, setLoading] = useState(true);
@@ -22,6 +23,10 @@ function MyApp({Component, pageProps}: AppProps) {
 
     return (
         <>
+            <Head>
+                <title> Mostafa-DE Portfolio </title>
+                <link rel="icon" href="/mostafa-avatar.png"/>
+            </Head>
             {loading ? <Loading/> : <Component {...pageProps} />}
         </>
     );
