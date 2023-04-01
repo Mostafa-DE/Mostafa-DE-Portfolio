@@ -5,17 +5,15 @@ import theme from "../../styles/theme";
 import {ValidatorForm, TextValidator} from "react-material-ui-form-validator";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import {Typography} from "@mui/material";
+import {Alert, Snackbar} from "@mui/material";
 import {FaUserCircle} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
-import {BiWorld} from "react-icons/bi";
 import {ImSpinner9} from "react-icons/im"
-import {IoPhonePortraitOutline} from "react-icons/io5";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 
 export default function ContactForm(): JSX.Element {
-    // const [openSuccessAlert, setOpenSuccessAlert] = useState(false);
-    // const [openErrorAlert, setOpenErrorAlert] = useState(false);
+    const [openSuccessAlert, setOpenSuccessAlert] = useState(false);
+    const [openErrorAlert, setOpenErrorAlert] = useState(false);
     const [isLoading, setIsLoading] = useState(false)
 
     const [values, setValues] = useState({
@@ -38,23 +36,15 @@ export default function ContactForm(): JSX.Element {
     const handleSubmit = async (evnt: React.SyntheticEvent) => {
         evnt.preventDefault();
         setIsLoading(true)
-        // const res = await fetch(`https://knaps.herokuapp.com/api/emails/`, {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //
-        //     body: JSON.stringify({
-        //         ...values,
-        //         full_name: `${values.full_name}`,
-        //         email: `${values.email}`,
-        //         country: `${values.country}`,
-        //         phone: `${values.phone}`,
-        //         company_name: `${values.company_name}`,
-        //         additional_info: `${values.additional_info}`,
-        //     }),
-        // })
-        // res.ok ? setOpenSuccessAlert(true) : setOpenErrorAlert(true)
+        const URL = `https://mostafa-email-production.up.railway.app/email/?name=${values.name}&email=${values.email}&message=${values.message}`
+        const res = await fetch(URL, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        res.ok ? setOpenSuccessAlert(true) : setOpenErrorAlert(true)
         setValues(defaultValues);
         setIsLoading(false)
     };
@@ -69,13 +59,30 @@ export default function ContactForm(): JSX.Element {
                 <p className="whoIam">__ Have a question or want to work together? __</p>
             </div>
             <Box>
-                {/*<SuccessAlert open={openSuccessAlert}*/}
-                {/*              setOpen={setOpenSuccessAlert}*/}
-                {/*/>*/}
-                {/*<ErrorAlert open={openErrorAlert}*/}
-                {/*            setOpen={setOpenErrorAlert}*/}
-                {/*/>*/}
-
+                {openSuccessAlert && (
+                    <Snackbar open={openSuccessAlert}
+                              autoHideDuration={6000}
+                              onClose={() => setOpenSuccessAlert(false)}
+                              anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+                              sx={{
+                                  width: '30%',
+                                  margin: "2.5rem 0 0 0",
+                                  [theme.breakpoints.down("sm")]: {width: "100%"}
+                              }}
+                    >
+                        <Alert severity="success" sx={{width: '100%'}}>Email Sent Successfully!</Alert>
+                    </Snackbar>
+                )}
+                {openErrorAlert && (
+                    <Snackbar open={openErrorAlert}
+                              autoHideDuration={6000}
+                              onClose={() => setOpenErrorAlert(false)}
+                              anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+                              sx={{width: '20%'}}
+                    >
+                        <Alert severity="error">Something Went Wrong!</Alert>
+                    </Snackbar>
+                )}
                 <Box sx={{display: "flex", justifyContent: "center"}}>
                     <ValidatorForm onSubmit={handleSubmit}>
                         <Box
