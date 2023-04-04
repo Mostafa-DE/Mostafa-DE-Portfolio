@@ -17,7 +17,7 @@ function MyApp({Component, pageProps}: AppProps) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 3000);
+        }, 2500);
         return () => clearTimeout(timer);
     }, []);
 
@@ -25,7 +25,7 @@ function MyApp({Component, pageProps}: AppProps) {
         <>
             <Head>
                 <title> Mostafa-DE Portfolio </title>
-                <link rel="icon" href="/mostafa-avatar.png"/>
+                <link rel="icon" href="/mostafa/mostafa-avatar.png"/>
             </Head>
             {loading ? <Loading/> : <Component {...pageProps} />}
         </>
