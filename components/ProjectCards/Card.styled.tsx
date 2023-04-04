@@ -1,7 +1,7 @@
 import {styled} from "@mui/system";
 import theme from "@/styles/theme";
 
-export const CardContainer = styled("div")({
+export const CardContainer = styled("div")(({imgSrc}: { imgSrc: string }) => ({
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -9,14 +9,17 @@ export const CardContainer = styled("div")({
     flexFlow: "wrap",
 
     ".cardBody": {
-        width: "18rem",
+        width: "28rem",
         height: "16rem",
-        background: "url('/sons.jpeg')",
+        background: `url('${imgSrc}')`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         borderRadius: "5px",
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
         margin: "2rem 0 0 0",
+        [theme.breakpoints.down("sm")]: {
+            width: "95%",
+        }
     },
 
     ".cardOverlay": {
@@ -50,4 +53,4 @@ export const CardContainer = styled("div")({
         fontSize: "14px",
     },
 
-})
+}));

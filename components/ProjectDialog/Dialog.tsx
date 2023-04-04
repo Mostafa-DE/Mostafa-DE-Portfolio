@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {DialogContainer, DialogContentStyled} from "@/components/Dialog/Dialog.styled";
+import {DialogContainer, DialogContentStyled} from "@/components/ProjectDialog/Dialog.styled";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import CarouselProject from "@/components/Carousel";
@@ -8,27 +8,15 @@ import {RiShareBoxFill} from "react-icons/ri";
 import {BsGithub} from "react-icons/bs";
 import Box from "@mui/material/Box";
 import {GrClose} from "react-icons/gr";
+import type {IProjectCardData} from "@/components/ProjectCards/";
 
 interface IDialogProps {
     open: boolean;
     onClose: () => void;
+    projectDetails: IProjectCardData;
 }
 
-function SimpleDialog(props: IDialogProps) {
-    const {onClose, open} = props;
-
-    const data =
-        {
-            title: "ChowNow Discover",
-            subtitle: "FOOD ORDERING PLATFORM.",
-            description: `ChowNow Discover is a food ordering platform that allows users to order food from their
-                          favorite restaurants. The platform is built with React, Next.js, and Material UI.
-                          The platform is built with React, Next.js, and Material UI
-            `,
-            techs: `React, Next.js, Material UI, Firebase, Stripe`,
-            isDemoBtnShow: true,
-        }
-
+function ProjectDialog({onClose, open, projectDetails}: IDialogProps) {
     return (
         <Dialog
             open={open}
@@ -50,15 +38,16 @@ function SimpleDialog(props: IDialogProps) {
                     </p>
                 </DialogTitle>
                 <DialogContent>
-                    <CarouselProject/>
+                    {/* Carousel */}
+                    <CarouselProject {...projectDetails}/>
                     <Box>
-                        <h2 style={{margin: "1rem 0 0 0"}}>{data.title}</h2>
+                        <h2 style={{margin: "1rem 0 0 0"}}>{projectDetails.title}</h2>
                         <span style={{
                             fontSize: "0.8rem",
                             fontWeight: "bold",
                             color: "rgba(255, 87, 87, 0.51)",
                         }}>
-                            {data.subtitle}
+                            {projectDetails.subtitle}
                         </span>
                         <Box sx={{margin: "0.5rem 0 0 0"}}>
                             <span style={{
@@ -66,20 +55,28 @@ function SimpleDialog(props: IDialogProps) {
                                 fontWeight: "bold",
                                 color: "rgba(51,51,51,0.67)",
                             }}>
-                                {data.techs}
+                                {projectDetails.techs}
                             </span>
                         </Box>
                         <Divider sx={{margin: "1rem 0", background: `rgba(51, 51, 51, 0.06)`}}/>
-                        <p style={{color: "rgba(51,51,51,0.75)"}}>{data.description}</p>
+                        <p style={{color: "rgba(51,51,51,0.75)"}}>{projectDetails.description}</p>
                     </Box>
 
                     <Box>
-                        <Button className="btn">
-                            <RiShareBoxFill style={{margin: "0 0.2rem 0 0", fontSize: "1rem"}}/>View Site
-                        </Button>
-                        <Button className="btn">
-                            <BsGithub style={{margin: "0 0.4rem 0 0", fontSize: "1rem"}}/>View Code
-                        </Button>
+                        {projectDetails.isDemoBtnShow && (
+                            <Button className="btn">
+                                <a href={projectDetails.demoLink} target="_blank" rel="noreferrer">
+                                    <RiShareBoxFill style={{margin: "0 0.2rem 0 0"}}/>View Site
+                                </a>
+                            </Button>
+                        )}
+                        {projectDetails.isGithubBtnShow && (
+                            <Button className="btn">
+                                <a href={projectDetails.githubLink} target="_blank" rel="noreferrer">
+                                    <BsGithub style={{margin: "0 0.4rem 0 0", fontSize: "1rem"}}/>View Code
+                                </a>
+                            </Button>
+                        )}
                     </Box>
                 </DialogContent>
             </DialogContentStyled>
@@ -87,7 +84,11 @@ function SimpleDialog(props: IDialogProps) {
     );
 }
 
-export default function DialogProject(): JSX.Element {
+interface IDialogProject {
+    projectDetails: IProjectCardData
+}
+
+export default function DialogProject({projectDetails}: IDialogProject): JSX.Element {
     const [open, setOpen] = useState(false);
     const handleClickOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -95,9 +96,10 @@ export default function DialogProject(): JSX.Element {
     return (
         <DialogContainer>
             <Button className="dialogBtn" onClick={handleClickOpen}>Learn More</Button>
-            <SimpleDialog
+            <ProjectDialog
                 open={open}
                 onClose={handleClose}
+                projectDetails={projectDetails}
             />
         </DialogContainer>
     );

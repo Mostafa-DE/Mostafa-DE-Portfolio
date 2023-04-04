@@ -3,7 +3,7 @@ import {Link} from "react-scroll";
 import {MyProjectsContainer} from "./MyProjects.styled";
 import {BsCodeSlash} from "react-icons/bs";
 import theme from "@/styles/theme";
-import Card from "@/components/Card";
+import ProjectCards from "components/ProjectCards";
 import {Typography} from "@mui/material";
 
 
@@ -30,7 +30,7 @@ export default function MyProjects(): JSX.Element {
                 </Typography>
             </div>
             <div className="containerCards">
-                <Card/>
+                <ProjectCards/>
             </div>
         </MyProjectsContainer>
     );
