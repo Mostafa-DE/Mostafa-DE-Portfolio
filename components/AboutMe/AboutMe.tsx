@@ -5,6 +5,7 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 import {Typography} from "@mui/material";
 import theme from "@/styles/theme";
+import {Link} from "react-scroll";
 
 export default function AboutMe(): JSX.Element {
     return (
@@ -48,10 +49,20 @@ export default function AboutMe(): JSX.Element {
                         );
                     })}
                     <Box className="container-Btn">
-                        <a className="cvBtn" href={cvLink} target="_blank" rel="noreferrer">
-                            View My CV
-                        </a>
+                        <Link className="cvBtn"
+                              to="contact"
+                              spy={true}
+                              duration={1000}
+                              smooth={true}
+                        >
+                            Request My CV
+                        </Link>
                     </Box>
+                    {/*<Box className="container-Btn">*/}
+                    {/*    <a className="cvBtn" href={cvLink} target="_blank" rel="noreferrer">*/}
+                    {/*        View My CV*/}
+                    {/*    </a>*/}
+                    {/*</Box>*/}
                 </Box>
             </Box>
         </AboutMeContainer>
