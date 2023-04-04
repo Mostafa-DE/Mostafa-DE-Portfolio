@@ -29,7 +29,7 @@ export default function AboutMe(): JSX.Element {
             >
                 <Box display="flex" flexDirection="column" alignItems="center">
                     <Image
-                        src="/mostafa-avatar.png"
+                        src="/mostafa/mostafa-avatar.png"
                         className="personalImg"
                         alt="mostafa-img"
                         width={350}

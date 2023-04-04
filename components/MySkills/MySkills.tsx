@@ -20,7 +20,7 @@ export default function MySkills(): JSX.Element {
                     {techIcons.map((icon: string, idx: number) => {
                         return (
                             <Box key={idx} className="techIcon">
-                                <Image key={idx} src={`/${icon}.png`} alt="skills-img" width={70} height={70}/>
+                                <Image key={idx} src={`/techs/${icon}.png`} alt="skills-img" width={70} height={70}/>
                             </Box>
                         );
                     })
