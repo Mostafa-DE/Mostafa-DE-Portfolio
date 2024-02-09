@@ -1,9 +1,12 @@
 export const techIcons = [
-    "ts",
-    "python",
-    "django",
-    "react",
-    "angular",
-    "next",
-    "express",
-]
+  "ts",
+  "python",
+  "django",
+  "golang",
+  "react",
+  "angular",
+  "next",
+  "express",
+  "amazon",
+  "terraform",
+];
