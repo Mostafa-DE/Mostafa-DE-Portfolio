@@ -23,14 +23,22 @@ function useSequentialDisplay(
           setTimeout(displayNextChar, displayInterval);
         } else {
           setTimeout(() => {
-            displayText = "";
-            charIndex = 0;
             currentTextIndex++;
-            setCurrentDisplay("");
+            resetDisplay();
             displayNextChar();
           }, pauseInterval);
         }
+      } else {
+        currentTextIndex = 0;
+        resetDisplay();
+        displayNextChar();
       }
+    };
+
+    const resetDisplay = () => {
+      charIndex = 0;
+      displayText = "";
+      setCurrentDisplay("");
     };
 
     displayNextChar();
