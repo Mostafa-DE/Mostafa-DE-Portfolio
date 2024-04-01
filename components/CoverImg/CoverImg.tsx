@@ -1,30 +1,11 @@
 import { CoverImgContainer } from "./CoverImg.styled";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
 import { Link } from "react-scroll";
-import { useEffect, useState } from "react";
+import { myCareerArr } from "./constants";
+import useSequentialDisplay from "@/hooks/useSequentialDisplay";
 
 export default function CoverImage(): JSX.Element {
-  const myCareerArr = [
-    "Software Engineer",
-    "Web Developer",
-    "Rock & Metal enthusiast",
-  ];
-  const [myCareer, setMyCareer] = useState<string>(myCareerArr[0]);
-
-  const toggleMyCareer = () => {
-    let i = 1;
-    setInterval(() => {
-      if (i === myCareerArr.length) i = 0;
-      setMyCareer(myCareerArr[i]);
-      i++;
-    }, 3000);
-  };
-
-  useEffect(() => {
-    toggleMyCareer();
-  }, []);
-
+  const career = useSequentialDisplay(myCareerArr, 100, 2000);
   return (
     <CoverImgContainer data-aos="fade-in" id="home">
       <div className="container">
@@ -32,7 +13,7 @@ export default function CoverImage(): JSX.Element {
           Hi There 👋, {"I'm"} <span className="myName">Mostafa-DE</span>
         </div>
         <div className="containerMyCareer">
-          {"I'm"} a <span className="myCareer">{myCareer}</span>
+          {"I'm"} a <span className="myCareer">{career}</span>
         </div>
         <Link to="aboutMe" spy={true} duration={1000} smooth={true}>
           <div className="containerBtn">
