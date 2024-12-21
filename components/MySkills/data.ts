@@ -52,7 +52,7 @@ export const techIcons = [
         link: "https://docs.celeryproject.org/en/stable/"
     },
     {
-        name: "tmux1",
+        name: "tmux",
     },
     {
         name: "nvim",
