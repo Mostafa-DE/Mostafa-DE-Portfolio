@@ -1,10 +1,9 @@
 import React from "react";
-import {Link} from "react-scroll";
 import {MyProjectsContainer} from "./MyProjects.styled";
 import {BsCodeSlash} from "react-icons/bs";
-import theme from "@/styles/theme";
 import ProjectCards from "components/ProjectCards";
 import {Typography} from "@mui/material";
+import theme from "@/styles/theme";
 
 
 export default function MyProjects(): JSX.Element {
@@ -17,16 +16,15 @@ export default function MyProjects(): JSX.Element {
                 </h1>
                 <br/>
                 <Typography className="bestProjectTxt">
-                    __ Here are a few design projects {"I've"} worked on. Want to see more?{" "}
+                    __ Check out some of my completed projects below __
+                </Typography>
+                <Typography margin="1rem 0 0 0">
+                    Curious to see more experimental, fun, or in-progress projects? Check out my {" "}
                     <span style={{color: theme.palette.primary.main}}>
-                        <Link to="contact"
-                              spy={true}
-                              duration={2000}
-                              smooth={true}
-                        >
-                            Contact me
-                        </Link>
-                    </span> __
+                        <a href="https://github.com/Mostafa-DE?tab=repositories" target="_blank">
+                            GitHub Repositories!
+                        </a>
+                    </span>
                 </Typography>
             </div>
             <div className="containerCards">

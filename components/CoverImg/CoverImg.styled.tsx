@@ -74,6 +74,35 @@ export const CoverImgContainer = styled("div")({
     animation: " bounce 4s infinite",
   },
 
+
+  ".container-Btn": {
+    margin: "4rem 0",
+    [theme.breakpoints.down("md")]: {
+      display: "flex",
+      justifyContent: "center",
+      margin: "1rem 0 0 0",
+    }
+  },
+
+
+  ".btn": {
+    padding: "1rem 2rem",
+    cursor: "pointer",
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+    border: "1px solid #ff5757",
+    borderRadius: "1.2rem",
+    fontSize: "0.9rem",
+    transition: "all 0.3s ease-in",
+  },
+
+  ".btn:hover": {
+    background: "none",
+    borderRadius: "0",
+    color: theme.palette.primary.main,
+    transition: "all 0.3s ease-out"
+  },
+
   "@keyframes bounce": {
     "0%, 20%, 53%, 80%, 100%": {
       transitionTimingFunction: "cubic-bezier(0.215, 0.610, 0.355, 1.000)",

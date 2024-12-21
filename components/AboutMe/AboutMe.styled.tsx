@@ -3,9 +3,14 @@ import theme from "@/styles/theme"
 
 export const AboutMeContainer = styled("div")({
     margin: "5rem 0 0 0",
+    backgroundColor: theme.palette.common.dark,
+
+    ".title": {
+        color: theme.palette.common.white,
+    },
 
     ".whoIam": {
-        color: theme.palette.primary.main,
+        color: theme.palette.common.white,
         margin: "-1rem 0 2rem 0"
     },
 
@@ -28,7 +33,7 @@ export const AboutMeContainer = styled("div")({
     },
 
     ".container-Btn": {
-        margin: "3rem 0 0 0",
+        margin: "3rem 0",
         [theme.breakpoints.down("md")]: {
             display: "flex",
             justifyContent: "center",
@@ -55,6 +60,7 @@ export const AboutMeContainer = styled("div")({
     },
 
     ".descriptionAboutMe": {
+        width: "90%",
         margin: "1rem 0",
         padding: "1.5rem 1rem",
         borderLeft: "3px solid",
@@ -63,6 +69,9 @@ export const AboutMeContainer = styled("div")({
         paddingLeft: "0.5rem",
         borderColor: theme.palette.primary.main,
         backgroundColor: theme.palette.common.white,
+        [theme.breakpoints.down("md")]: {
+            width: "100%",
+        },
         [theme.breakpoints.down("xs")]: {
             margin: "0.8rem 0.5rem",
         }

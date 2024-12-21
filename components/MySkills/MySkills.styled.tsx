@@ -10,12 +10,13 @@ export const SkillsContainer = styled("div")({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.common.dark,
         padding: "1rem 0 6rem 0"
     },
 
     ".title": {
         fontSize: "1.9rem",
+        color: theme.palette.common.white,
     },
 
     ".skillsText": {
@@ -30,12 +31,13 @@ export const SkillsContainer = styled("div")({
         alignItems: "center",
         flexDirection: "row",
         flexFlow: "wrap",
-        margin: "2rem 0 0 0"
+        margin: "2rem 0 0 0",
+        maxWidth: "60%",
     },
 
     ".techIcon": {
         transition: "all 0.3s ease-in",
-        margin: "1rem 1rem 0 0",
+        margin: "1rem 2rem 0 0",
     },
 
     ".techIcon:hover": {

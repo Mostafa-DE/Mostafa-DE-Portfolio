@@ -1,11 +1,21 @@
 import {styled} from "@mui/system";
 import theme from "@/styles/theme"
 
-export const MyProjectsContainer = styled("div")({
+export const MyBlogContainer = styled("div")({
     margin: "6rem 0 0 0",
     padding: "2rem 0",
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.white,
+
+    ".containerCards": {
+        display: "flex",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        flexDirection: "row",
+        flexFlow: "wrap",
+        padding: "2rem 0",
+
+    },
 
     ".container": {
         display: "flex",
@@ -15,15 +25,8 @@ export const MyProjectsContainer = styled("div")({
         padding: "2rem 0",
     },
 
-    ".bestProjectTxt": {
-        margin: "-1rem 0 0 0",
-        textAlign: "center",
-        width: "100%",
-    },
-
     ".arrowIcon": {
         transform: "rotate(-90deg)",
         fontSize: "1rem"
-    }
-
+    },
 })

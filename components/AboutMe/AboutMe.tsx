@@ -1,6 +1,5 @@
 import {AboutMeContainer} from "./AboutMe.styled";
 import {BsCodeSlash} from "react-icons/bs";
-import {cvLink, descriptionAboutMe} from "./data"
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import {Typography} from "@mui/material";
@@ -18,16 +17,16 @@ export default function AboutMe(): JSX.Element {
                 <Typography className="whoIam">__ Who i am__</Typography>
             </Box>
 
-            <Box display="flex"
-                 alignItems="center"
-                 justifyContent="space-evenly"
-                 sx={{
-                     [theme.breakpoints.down("md")]: {
-                         flexDirection: "column",
-                     }
-                 }}
+            <Box
+                sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    [theme.breakpoints.down("md")]: {
+                        flexDirection: "column",
+                    }
+                }}
             >
-                <Box display="flex" flexDirection="column" alignItems="center">
+                <Box display="flex" flexDirection="column" alignItems="center" width="100%">
                     <Image
                         src="/mostafa/mostafa-avatar.png"
                         className="personalImg"
@@ -35,19 +34,23 @@ export default function AboutMe(): JSX.Element {
                         width={350}
                         height={300}
                     />
-                    <Typography variant="body1" sx={{margin: "0.5rem 0", color: theme.palette.common.black}}>
-                        {"I'm"} Mostafa Fayyad aka Mostafa-DE
+                    <Typography variant="body1" sx={{margin: "0.5rem 0", color: theme.palette.common.white}}>
+                        {"I'm"} Mostafa Fayyad {" "}
+                        <span style={{color: theme.palette.primary.main}}>aka</span> Mostafa-DE
                     </Typography>
                 </Box>
 
-                <Box display="flex" flexDirection="column">
-                    {descriptionAboutMe.map((text: string, idx: number) => {
-                        return (
-                            <Typography className="descriptionAboutMe" key={idx} variant="body1">
-                                {text}
-                            </Typography>
-                        );
-                    })}
+                <Box width="100%">
+                    <Typography className="descriptionAboutMe" variant="body1">
+                        I’m a Software Engineer who loves solving problems and creating smooth, reliable systems. I
+                        enjoy tackling new challenges and finding smart, simple solutions that make a difference. I have
+                        a special fascination with how compilers and interpreters turn code into
+                        functionality.<br/><br/>
+
+                        Outside of work, I’m passionate about exploring new technologies, improving my skills, and
+                        diving into books. I also enjoy learning languages, staying active, and taking on new adventures
+                        whenever I can. For me, it’s all about growing, learning, and having fun along the way.
+                    </Typography>
                     <Box className="container-Btn">
                         <Link className="cvBtn"
                               to="contact"
@@ -55,7 +58,7 @@ export default function AboutMe(): JSX.Element {
                               duration={1000}
                               smooth={true}
                         >
-                            Request My CV
+                            Let's Talk!
                         </Link>
                     </Box>
                     {/*<Box className="container-Btn">*/}

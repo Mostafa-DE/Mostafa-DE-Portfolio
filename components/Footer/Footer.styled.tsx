@@ -16,7 +16,7 @@ export const FooterContainer = styled("div")({
     },
     ".copyRight p": {
         transition: "1s",
-        color: theme.palette.common.black,
+        color: theme.palette.common.white,
     },
 
     ".copyRight p a": {
@@ -50,7 +50,7 @@ export const FooterContainer = styled("div")({
 
     ".contactIcon": {
         fontSize: "2rem",
-        color: theme.palette.common.black,
+        color: theme.palette.common.white,
         margin: "0 0 0 1rem",
         transition: "all 0.3s ease-in",
     },

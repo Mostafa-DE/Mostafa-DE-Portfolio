@@ -14,13 +14,9 @@ export default function Header(): JSX.Element {
         <HeaderContainer>
             <div className={scrollState === "top" ? "mainHeader" : "mainHeaderScroll"}>
                 <p className="containerLogo">
-                    <Link to="home"
-                          spy={true}
-                          duration={500}
-                          smooth={true}
-                    >
+                    <a href="/">
                         Mostafa-<span className={scrollState === "top" ? "textLogo" : "textLogoScroll"}>DE</span>
-                    </Link>
+                    </a>
                 </p>
 
                 <ul className="containerLink">
@@ -63,6 +59,9 @@ export default function Header(): JSX.Element {
                         >
                             Contact Me
                         </Link>
+                    </li>
+                    <li>
+                        <a href="/blog" target="_blank">My Blog</a>
                     </li>
                 </ul>
                 <AiOutlineMenu className="menuIcon" onClick={() => setOpenDrawer(true)}/>

@@ -1,4 +1,4 @@
-import {display, styled} from "@mui/system";
+import {styled} from "@mui/system";
 
 export const CursorContainer = styled("div")({
     position: "fixed",

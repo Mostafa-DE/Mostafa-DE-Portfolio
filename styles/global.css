@@ -4,6 +4,7 @@ html,
 body {
     padding: 0;
     margin: 0;
+    background-color: #1b1b1b;
 }
 
 a {
@@ -29,20 +30,35 @@ a {
 }
 
 
-
 body::-webkit-scrollbar {
-  width: 0.5rem;
+    width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #ff5757;
+    background-color: #ff5757;
 }
 
 .MuiDrawer-paper {
     background-color: #fafafa;
     color: #333;
+}
+
+#mui-6 {
+    color: #fafafa;
+}
+
+#mui-7 {
+    color: #fafafa;
+}
+
+#mui-6-label {
+    color: #fafafa;
+}
+
+#mui-7-label {
+    color: #fafafa;
 }
