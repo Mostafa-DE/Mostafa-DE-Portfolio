@@ -18,7 +18,7 @@ export default function CoverImage(): JSX.Element {
                 </div>
                 <div>
                     <Box className="container-Btn">
-                        <a href='/blog' target="_blank"
+                        <a rel="noreferrer" href='/blog' target="_blank"
                               className="btn"
                         >
                             Visit My Blog

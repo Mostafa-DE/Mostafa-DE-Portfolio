@@ -18,9 +18,9 @@ export default function MySkills(): JSX.Element {
                     __Here are the technologies I am comfortable and experience with__
                 </Typography>
                 <Box className="containerTechIcons">
-                    {techIcons.map((icon: string, idx: number) => {
+                    {techIcons.map((icon: { name: string, link?: string }, idx: number) => {
                         return (
-                            <a href={icon.link} target="_blank">
+                            <a href={icon.link || "#"} rel="noreferrer" target="_blank" key={idx}>
                                 <Box key={idx} className="techIcon">
                                     <Image key={idx}
                                            src={`/techs/${icon.name}.png`}

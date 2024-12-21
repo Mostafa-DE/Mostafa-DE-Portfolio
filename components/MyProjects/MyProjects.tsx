@@ -21,7 +21,7 @@ export default function MyProjects(): JSX.Element {
                 <Typography margin="1rem 0 0 0">
                     Curious to see more experimental, fun, or in-progress projects? Check out my {" "}
                     <span style={{color: theme.palette.primary.main}}>
-                        <a href="https://github.com/Mostafa-DE?tab=repositories" target="_blank">
+                        <a rel="noreferrer" href="https://github.com/Mostafa-DE?tab=repositories" target="_blank">
                             GitHub Repositories!
                         </a>
                     </span>
