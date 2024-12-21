@@ -3,7 +3,7 @@ import theme from "@/styles/theme"
 
 export const ContactFormContainer = styled("div")({
     margin: "4rem 0 0 0",
-    backgroundColor: theme.palette.secondary.dark,
+    backgroundColor: theme.palette.secondary.main,
     color: theme.palette.common.white,
     boxShadow: "2px 2px 10px 1px rgba(0, 0, 0, 0.2)",
     padding: "6rem 0",

@@ -24,6 +24,7 @@ export default function CoverImage(): JSX.Element {
                             Visit My Blog
                         </a>
                     </Box></div>
+                {/*@ts-ignore*/}
                 <Link to="aboutMe" spy={true} duration={1000} smooth={true}>
                     <div className="containerBtn">
                         <a className="aboutMeBtn">

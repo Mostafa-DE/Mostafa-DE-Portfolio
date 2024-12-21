@@ -10,7 +10,7 @@ export const SkillsContainer = styled("div")({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: theme.palette.secondary.dark,
+        backgroundColor: theme.palette.secondary.main,
         padding: "1rem 0 6rem 0"
     },
 

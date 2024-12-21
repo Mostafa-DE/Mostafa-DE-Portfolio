@@ -4,7 +4,7 @@ import theme from "@/styles/theme"
 export const MyProjectsContainer = styled("div")({
     margin: "6rem 0 0 0",
     padding: "2rem 0",
-    backgroundColor: theme.palette.secondary.dark,
+    backgroundColor: theme.palette.secondary.main,
     color: theme.palette.common.white,
 
     ".container": {

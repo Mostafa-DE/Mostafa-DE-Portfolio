@@ -3,7 +3,7 @@ import theme from "@/styles/theme"
 
 export const AboutMeContainer = styled("div")({
     margin: "5rem 0 0 0",
-    backgroundColor: theme.palette.secondary.dark,
+    backgroundColor: theme.palette.secondary.main,
 
     ".title": {
         color: theme.palette.common.white,
