@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "@/styles/global.css";
 import Head from "next/head";
+import Cursor from "@/components/Cursor/Cursor";
 
 function MyApp({Component, pageProps}: AppProps) {
     useEffect(() => {
@@ -18,8 +19,13 @@ function MyApp({Component, pageProps}: AppProps) {
                 <title> Mostafa-DE Portfolio </title>
                 <link rel="icon" href="/mostafa/mostafa-avatar.png"/>
             </Head>
-            {/*@ts-ignore*/}
-            <Component {...pageProps} />
+
+            <div style={{height: "95vh"}}>
+                <Component {...pageProps} />
+
+                <Cursor/>
+            </div>
+
         </>
     );
 }

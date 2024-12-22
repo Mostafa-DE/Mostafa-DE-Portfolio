@@ -5,6 +5,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #1b1b1b;
+    color: #fafafa;
 }
 
 a {
@@ -47,18 +48,10 @@ body::-webkit-scrollbar-thumb {
     color: #333;
 }
 
-#mui-6 {
+.MuiFormLabel-root {
     color: #fafafa;
 }
 
-#mui-7 {
-    color: #fafafa;
-}
-
-#mui-6-label {
-    color: #fafafa;
-}
-
-#mui-7-label {
+.MuiInput-input {
     color: #fafafa;
 }

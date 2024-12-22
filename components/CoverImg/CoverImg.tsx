@@ -18,13 +18,12 @@ export default function CoverImage(): JSX.Element {
                 </div>
                 <div>
                     <Box className="container-Btn">
-                        <a rel="noreferrer" href='/blog' target="_blank"
-                              className="btn"
+                        <a rel="noreferrer" href='/mdx' target="_blank"
+                           className="btn"
                         >
                             Visit My Blog
                         </a>
                     </Box></div>
-                {/*@ts-ignore*/}
                 <Link to="aboutMe" spy={true} duration={1000} smooth={true}>
                     <div className="containerBtn">
                         <a className="aboutMeBtn">

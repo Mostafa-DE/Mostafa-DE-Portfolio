@@ -21,7 +21,6 @@ export default function Header(): JSX.Element {
 
                 <ul className="containerLink">
                     <li>
-                        {/*@ts-ignore*/}
                         <Link to="aboutMe"
                               duration={1000}
                               spy={true}
@@ -32,7 +31,6 @@ export default function Header(): JSX.Element {
                         </Link>
                     </li>
                     <li>
-                        {/*@ts-ignore*/}
                         <Link to="mySkills"
                               duration={1000}
                               spy={true}
@@ -43,7 +41,6 @@ export default function Header(): JSX.Element {
                         </Link>
                     </li>
                     <li>
-                        {/*@ts-ignore*/}
                         <Link to="myProjects"
                               duration={1000}
                               spy={true}
@@ -54,7 +51,6 @@ export default function Header(): JSX.Element {
                         </Link>
                     </li>
                     <li>
-                        {/*@ts-ignore*/}
                         <Link to="contact"
                               duration={1500}
                               spy={true}
@@ -65,7 +61,7 @@ export default function Header(): JSX.Element {
                         </Link>
                     </li>
                     <li>
-                        <a href="/blog" target="_blank">My Blog</a>
+                        <a href="/mdx" target="_blank">My Blog</a>
                     </li>
                 </ul>
                 <AiOutlineMenu className="menuIcon" onClick={() => setOpenDrawer(true)}/>

@@ -21,7 +21,6 @@ export default function ButtonScrollUp() {
     return (
         <ButtonScrollUpContainer>
             {isVisible && (
-                // @ts-ignore
                 <Link to="home"
                       spy={true}
                       duration={500}

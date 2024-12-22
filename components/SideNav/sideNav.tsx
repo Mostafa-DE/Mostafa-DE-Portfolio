@@ -37,7 +37,6 @@ const sideNavDrawer: React.FC<sideNaveProps> = ({open, setOpen}) => {
         >
             <List>
                 {sideNavData.map(({title, idToScroll}, idx) => (
-                    // @ts-ignore
                     <Link key={idx}
                           to={idToScroll}
                           spy={true}

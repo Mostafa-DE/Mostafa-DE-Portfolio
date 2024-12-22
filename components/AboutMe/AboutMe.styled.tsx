@@ -4,6 +4,7 @@ import theme from "@/styles/theme"
 export const AboutMeContainer = styled("div")({
     margin: "5rem 0 0 0",
     backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.dark,
 
     ".title": {
         color: theme.palette.common.white,

@@ -52,7 +52,6 @@ export default function AboutMe(): JSX.Element {
                         whenever I can. For me, it’s all about growing, learning, and having fun along the way.
                     </Typography>
                     <Box className="container-Btn">
-                        {/*@ts-ignore*/}
                         <Link className="cvBtn"
                               to="contact"
                               spy={true}

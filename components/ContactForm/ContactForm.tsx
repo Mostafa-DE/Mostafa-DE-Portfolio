@@ -92,6 +92,7 @@ export default function ContactForm(): JSX.Element {
                     </Snackbar>
                 )}
                 <Box sx={{display: "flex", justifyContent: "center"}}>
+                    {/*@ts-ignore*/}
                     <ValidatorForm onSubmit={handleSubmit}>
                         <Box
                             sx={{
@@ -114,6 +115,7 @@ export default function ContactForm(): JSX.Element {
                                 }}
                             >
                                 <FaUserCircle className="icon"/>
+                                {/*@ts-ignore*/}
                                 <TextValidator
                                     type="text"
                                     name="name"
@@ -141,6 +143,7 @@ export default function ContactForm(): JSX.Element {
                                 }}
                             >
                                 <MdEmail className="icon"/>
+                                {/*@ts-ignore*/}
                                 <TextValidator
                                     type="email"
                                     name="email"
