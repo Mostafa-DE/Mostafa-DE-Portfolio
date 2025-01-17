@@ -61,7 +61,12 @@ export default function Header(): JSX.Element {
                         </Link>
                     </li>
                     <li>
-                        <a href="https://blog.mostafade.com" target="_blank">My Blog</a>
+                        <a href="https://blog.mostafade.com"
+                           target="_blank"
+                           rel="noreferrer"
+                        >
+                            My Blog
+                        </a>
                     </li>
                 </ul>
                 <AiOutlineMenu className="menuIcon" onClick={() => setOpenDrawer(true)}/>
