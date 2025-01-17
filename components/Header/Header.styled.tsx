@@ -4,11 +4,11 @@ import theme from "@/styles/theme"
 export const HeaderContainer = styled("div")({
     ".mainHeader, .mainHeaderScroll": {
         position: "fixed",
-        padding: "0.5rem 0",
+        padding: "0.5rem 1.5rem",
         zIndex: 1,
         width: "100%",
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         alignItems: "center",
         transition: "all 0.3s ease-in-out",
         backgroundColor: "transparent",
@@ -25,7 +25,7 @@ export const HeaderContainer = styled("div")({
     ".containerLogo": {
         fontSize: "1.8rem",
         fontWeight: 600,
-        margin: 0,
+        margin: "1rem 0 0 0",
         color: theme.palette.common.white,
         cursor: "pointer"
     },
@@ -45,7 +45,7 @@ export const HeaderContainer = styled("div")({
 
     ".containerLink li": {
         cursor: "pointer",
-        margin: "0 0 0 2.8rem",
+        margin: "1.5rem 0 0 2.8rem",
         fontWeight: 600,
         color: theme.palette.common.white,
         transition: "all 0.3s ease-in"
@@ -73,21 +73,16 @@ export const HeaderContainer = styled("div")({
         color: theme.palette.common.white,
         fontSize: "1.8rem",
         display: "none",
-        margin: 0,
+        margin: "1rem 0 0 0",
     },
 
-    "@media (max-width: 748px)": {
+    "@media (max-width: 880px)": {
         ".containerLink li": {
             display: "none"
         },
 
-        ".containerLogo": {
-            margin: "0 0 0 -1rem"
-        },
-
         ".menuIcon": {
             display: "block",
-            margin: "0 0 0 -1rem"
         }
     }
 
